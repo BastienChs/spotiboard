@@ -1,0 +1,1 @@
+export const SpotifyToken = document.cookie.split('=')[1];
