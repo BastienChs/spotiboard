@@ -1,8 +1,8 @@
 import React from 'react';
-import { ReactComponent as Play } from '../../assets/play.svg';
-import { ReactComponent as Pause } from '../../assets/pause.svg';
-import { ReactComponent as Next } from '../../assets/next.svg';
-import { ReactComponent as Prev } from '../../assets/prev.svg';
+import { ReactComponent as Play } from '../../../assets/play.svg';
+import { ReactComponent as Pause } from '../../../assets/pause.svg';
+import { ReactComponent as Next } from '../../../assets/next.svg';
+import { ReactComponent as Prev } from '../../../assets/prev.svg';
 import './style.css'
 
 const AudioControls = ({

@@ -41,10 +41,12 @@ const AudioPlayer = ({tracks}) => {
         }
     }
 
-    const artist = artists.map((artist,index) => {
+    const artistLinks = artists.map((artist,index) => {
         const separator = artists[artists.length-1] === artist ? '' : ', '
         return (<a href={artist.external_urls.spotify} key={index} target={'_blank'} rel={"noreferrer"}>{artist.name}{separator}</a>)
     })
+    const artistStrings = artists.map(artist=>{return artist.name}).join(', ')
+
 
     const startTimer = () => {
         // Clear any timers already running
@@ -121,7 +123,7 @@ const AudioPlayer = ({tracks}) => {
                         <div className="form-check form-switch">
                             <input
                                 className="form-check-input radio-btn-spotiboard appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
-                                type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={isRotateCoverActivated} onClick={()=> setIsRotateCoverActivated(!isRotateCoverActivated)}/>
+                                type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={isRotateCoverActivated} onChange={()=> setIsRotateCoverActivated(!isRotateCoverActivated)}/>
                         </div>
                     </div>
                 </div>
@@ -129,10 +131,11 @@ const AudioPlayer = ({tracks}) => {
                     <img
                         className={`artwork border border-green-600 ${isPlaying && isRotateCoverActivated ? 'rotate' : ''}`}
                         src={album.images[1].url}
-                        alt={`track artwork for ${name} by ${artist}`}
+                        alt={`track artwork for ${name} by ${artistStrings}`}
                     />
                     <h2 className="title pt-1"><a href={external_urls.spotify} target={'_blank'} rel={"noreferrer"}>{name}</a></h2>
-                    <h3 className="artist mb-2">{artist}</h3>
+                    <h3 className="artist mt-2"><a href={album.external_urls.spotify} target={'_blank'} rel={"noreferrer"}>{album.name}</a></h3>
+                    <h3 className="artist mb-2">{artistLinks}</h3>
                     <AudioControls
                         isPlaying={isPlaying}
                         onPrevClick={toPrevTrack}

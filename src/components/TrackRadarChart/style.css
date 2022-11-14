@@ -1,0 +1,7 @@
+.chart-container{
+    max-height: 600px;
+}
+
+.recharts-layer, .recharts-polar-angle-axis-tick{
+    fill: white;
+}

@@ -1,18 +1,18 @@
-:root {
-    --white: #fff;
-    --active-color: #00aeb0;
-}
+/*:root {*/
+/*    --white: #fff;*/
+/*    --active-color: #00aeb0;*/
+/*}*/
 
-* {
-    box-sizing: border-box;
-}
+/** {*/
+/*    box-sizing: border-box;*/
+/*}*/
 
-html {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    background: var(--active-color);
-    transition: background 0.4s ease;
-}
+/*html {*/
+/*    font-family: Arial, Helvetica, sans-serif;*/
+/*    height: 100%;*/
+/*    background: var(--active-color);*/
+/*    transition: background 0.4s ease;*/
+/*}*/
 
 button {
     background: none;
@@ -21,6 +21,8 @@ button {
 }
 
 .audio-player {
+    --white: #fff;
+    --active-color: #00aeb0;
     max-width: 350px;
     border-radius: 20px;
     padding: 24px;
