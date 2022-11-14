@@ -92,3 +92,9 @@ input[type="range"]::-webkit-slider-thumb {
 .radio-btn-spotiboard:checked{
     background-color: mediumseagreen !important;
 }
+
+.body-info-track h2:hover,
+.album:hover,
+.artist-link:hover{
+    text-decoration: underline;
+}

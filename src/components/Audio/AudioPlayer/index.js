@@ -43,7 +43,7 @@ const AudioPlayer = ({tracks}) => {
 
     const artistLinks = artists.map((artist,index) => {
         const separator = artists[artists.length-1] === artist ? '' : ', '
-        return (<a href={artist.external_urls.spotify} key={index} target={'_blank'} rel={"noreferrer"}>{artist.name}{separator}</a>)
+        return (<a className={'artist-link'} href={artist.external_urls.spotify} key={index} target={'_blank'} rel={"noreferrer"}>{artist.name}{separator}</a>)
     })
     const artistStrings = artists.map(artist=>{return artist.name}).join(', ')
 
@@ -134,7 +134,7 @@ const AudioPlayer = ({tracks}) => {
                         alt={`track artwork for ${name} by ${artistStrings}`}
                     />
                     <h2 className="title pt-1"><a href={external_urls.spotify} target={'_blank'} rel={"noreferrer"}>{name}</a></h2>
-                    <h3 className="artist mt-2"><a href={album.external_urls.spotify} target={'_blank'} rel={"noreferrer"}>{album.name}</a></h3>
+                    <h3 className="album mt-2"><a href={album.external_urls.spotify} target={'_blank'} rel={"noreferrer"}>{album.name}</a></h3>
                     <h3 className="artist mb-2">{artistLinks}</h3>
                     <AudioControls
                         isPlaying={isPlaying}
