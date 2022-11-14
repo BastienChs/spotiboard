@@ -8,8 +8,8 @@ This project has been made using React, TailwindCSS, Recharts, Axios, Colr API a
   - Show the position of current track (left top corner)
   - Possibility to disable the animation of rotating album cover (right top corner)
   - Diffuse extract of each songs
-  - previous, pause, play and next button
-  - Coming soon: possibility to remotely play on spotify the current song
+  - Previous, pause, play and next button
+  - Possibility to remotely play on spotify the current song
 - Chart displaying various datas about specific tracks
   - Available datas
     - Danceability
