@@ -31,15 +31,11 @@ const SendToSpotify = (props) => {
                     'Authorization': 'Bearer ' + value
                 }
         }).then(resp => {
-                console.log(resp)
         }).catch(err => {
             console.log(err)
         })
     }
 
-    const playSongOnSpotifyRequest = () => {
-
-    }
 
     return(
         <button onClick={() => playTrackOnSpotify(props.trackId)} className={'mt-1 btn-send-spotify'}>Play complete song on Spotify</button>
