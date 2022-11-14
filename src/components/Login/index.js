@@ -17,7 +17,7 @@ function generateRandomString(number) {
 
 const getSpotifyLoginUrl = () => {
     let state = generateRandomString(16);
-    let scope = 'user-read-email user-read-private user-read-playback-position user-top-read user-read-recently-played playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public ugc-image-upload';
+    let scope = 'user-read-email user-read-private user-read-playback-position user-top-read user-read-recently-played playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public ugc-image-upload user-modify-playback-state';
 
     return ('https://accounts.spotify.com/authorize?' +
         queryString.stringify({

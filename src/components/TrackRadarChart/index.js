@@ -98,12 +98,7 @@ const TrackRadarChart = (props) => {
         }
     }, [radarProperties.length])
 
-    useEffect(() => {
-        console.log(dataset)
-    }, [dataset])
-
     const radars = radarProperties.map((currentRadar, id) => {
-        console.log(radarProperties)
         const {name, dataKey, color} = currentRadar
         return (<Radar key={id} keyPoints={dataKey} name={name} dataKey={dataKey} stroke={color} fill={color}
                        fillOpacity={0.5}/>)

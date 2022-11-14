@@ -46,7 +46,6 @@ const Header = () => {
                     console.log(err)
                 })
             }
-        console.log(userData)
     }
 
     const checkDataAge = date => {

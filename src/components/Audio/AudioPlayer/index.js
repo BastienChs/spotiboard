@@ -1,6 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import AudioControls from '../AudioControls';
 import './style.css'
+import SendToSpotify from "../SendToSpotify";
 
 //Based on the wonderful work of Ryan Finn (https://letsbuildui.dev/articles/building-an-audio-player-with-react-hooks)
 const AudioPlayer = ({tracks}) => {
@@ -12,7 +13,7 @@ const AudioPlayer = ({tracks}) => {
 
     // Destructure for conciseness
     // const { title, artist, color, image, audioSrc } = tracks[trackIndex];
-    const {name, artists, album, preview_url, external_urls} = tracks[trackIndex]
+    const {id, name, artists, album, preview_url, external_urls} = tracks[trackIndex]
 
     // Refs
     const audioRef = useRef(new Audio(preview_url));
@@ -154,6 +155,7 @@ const AudioPlayer = ({tracks}) => {
                         onKeyUp={onScrubEnd}
                         style={{ background: trackStyling }}
                     />
+                    <SendToSpotify trackId={id}/>
                 </div>
             </div>
         </div>

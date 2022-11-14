@@ -37,7 +37,7 @@ const TopSongs = (props) => {
 
                     const artistLinks = trackInfo.artists.map((artist, index) => {
                             const separator = trackInfo.artists[trackInfo.artists.length - 1] === artist ? '' : ', '
-                            return (<a className={'text-gray-300 text-xs'} href={artist.external_urls.spotify} key={index} target={'_blank'}
+                            return (<a className={'text-gray-300 text-xs clickable-link-toplist'} href={artist.external_urls.spotify} key={index} target={'_blank'}
                                        rel={"noreferrer"}>{artist.name}{separator}</a>)
                         })
 
@@ -52,12 +52,12 @@ const TopSongs = (props) => {
                                 </div>
                                 <div className={'col-span-3'}>
                                     <h5 className="text-white text-base font-medium">
-                                        <a href={trackInfo.external_urls.spotify} target={'_blank'} rel={"noreferrer"}>
+                                        <a className={'clickable-link-toplist'} href={trackInfo.external_urls.spotify} target={'_blank'} rel={"noreferrer"}>
                                             {trackInfo.name}
                                         </a>
                                     </h5>
                                     <h6 className="text-gray-200 text-sm">
-                                        <a href={trackInfo.album.external_urls.spotify} target={'_blank'} rel={"noreferrer"}>
+                                        <a className={'clickable-link-toplist'} href={trackInfo.album.external_urls.spotify} target={'_blank'} rel={"noreferrer"}>
                                             {trackInfo.album.name}
                                         </a>
                                     </h6>
